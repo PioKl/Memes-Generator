@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-const ChosedMeme = ({ pickedMeme, setPickedMeme }) => {
+
+
+const ChosedMeme = ({ pickedMeme }) => {
 
     //Tylko wtedy, gdy nie uzywa sie boxes
     /*  const [text0, setText0] = useState("");
@@ -13,9 +15,7 @@ const ChosedMeme = ({ pickedMeme, setPickedMeme }) => {
     const [boxText4, setBoxText4] = useState("");
 
     const [createdMeme, setCreatedMeme] = useState(null);
-    const handleMeme = () => {
-        setPickedMeme(null)
-    }
+
     //rozwiazanie bez axiosa
     /*     const handleSubmit = async e => {
             e.preventDefault();
@@ -65,18 +65,19 @@ const ChosedMeme = ({ pickedMeme, setPickedMeme }) => {
 
     }
 
-
     return (
         <>
             {createdMeme ?
-
                 <div>
-                    <img src={createdMeme} alt="" />
+                    <a href={createdMeme} rel="noopener noreferrer" target="_blank">
+                        <img src={createdMeme} alt="" />
+                    </a>
                 </div>
+
                 :
                 <div>
                     <form onSubmit={handleSubmit}>
-                        <img src={pickedMeme.url} width="500" height="500" alt="" onClick={handleMeme} />
+                        <img src={pickedMeme.url} width="500" height="500" alt="" />
                         <h1>{pickedMeme.name}</h1>
                         {pickedMeme.box_count <= 2 ?
                             <>
