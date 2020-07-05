@@ -4,6 +4,7 @@ import MemesList from './MemesList';
 import ChosedMeme from './ChosedMeme';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import axios from 'axios';
+import { whiteSpacesReplace } from '../functions/replace';
 
 function App() {
 
@@ -22,7 +23,7 @@ function App() {
   }, [])
 
   const chosedMeme = memes.map(meme => (
-    <Route key={meme.id} exact path={`/${meme.name}`}>
+    <Route key={meme.id} path={`/${whiteSpacesReplace(meme.name)}`}>
       <ChosedMeme pickedMeme={meme} />
     </Route>
   ))
