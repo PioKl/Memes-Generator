@@ -5,12 +5,13 @@ import ChosedMeme from './ChosedMeme';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import axios from 'axios';
 import { whiteSpacesReplace } from '../functions/replace';
+import Search from './Search';
 
 function App() {
 
   const [memes, setMemes] = useState([]);
   const [filteredMemes, setFilteredMemes] = useState([]);
-  const [search, setSearch] = useState('');
+  const [tipChoosed, setTipChoosed] = useState(false);
 
   useEffect(() => {
     axios
@@ -26,21 +27,11 @@ function App() {
 
   }, [])
 
-  const handleSearch = (e) => {
-    setSearch(e.target.value)
-    let actualMemesList = [];
-    let newMemesList = [];
-    if (e.target.value !== "") {
-      actualMemesList = memes;
-      newMemesList = actualMemesList.filter(meme => {
-        return meme.name.toLowerCase().includes(e.target.value.toLocaleLowerCase());
-      })
-    } else {
-      newMemesList = memes;
+  const handleTipStatusChange = () => {
+    if (tipChoosed === true) {
+      setTipChoosed(false);
     }
-    setFilteredMemes(newMemesList)
   }
-
 
   const chosedMeme = memes.map(meme => (
     <Route key={meme.id} path={`/${whiteSpacesReplace(meme.name)}`}>
@@ -50,16 +41,20 @@ function App() {
 
   return (
     <Router basename={process.env.PUBLIC_URL}>
-      <div className="App">
+      <div className="App" onClick={handleTipStatusChange} >
         <Switch>
           <Route exact path="/">
-            <input type="text" value={search} onChange={handleSearch} />
-            <MemesList tableOfMemes={filteredMemes} />
+            <header className="header">
+              <Search memes={memes} filteredMemes={filteredMemes} setFilteredMemes={setFilteredMemes} tipChoosed={tipChoosed} setTipChoosed={setTipChoosed} />
+            </header>
+            <main className="main">
+              <MemesList tableOfMemes={filteredMemes} />
+            </main>
           </Route>
           {chosedMeme}
         </Switch>
       </div>
-    </Router>
+    </Router >
   );
 }
 
