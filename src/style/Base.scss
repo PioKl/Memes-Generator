@@ -8,11 +8,16 @@
     list-style: none;
 }
 
+/* *:focus {
+    outline: none;
+} */
+
 html {
     box-sizing: border-box;
     font-size: 62.5%; //10px/16px = 62.5%, 1rem = 10px;
 }
 
-/* body {
+body {
     //font-family: 'Lexend Giga', sans-serif;
-} */
+    background-color: rgb(46, 40, 48);
+}
