@@ -41,7 +41,7 @@ function App() {
 
   return (
     <Router basename={process.env.PUBLIC_URL}>
-      <div className="App" onClick={handleTipStatusChange} >
+      <div className="App container" onClick={handleTipStatusChange} >
         <Switch>
           <Route exact path="/">
             <header className="header">
