@@ -49,8 +49,14 @@ const Search = ({ memes, filteredMemes, setFilteredMemes, tipChoosed, setTipChoo
 
 
     return (
+        /*         <div onClick={handleSearchClick} className={`filter__panel ${tipChoosed ? "filter__panel--arrowUp" : "filter__panel--arrowDown"}`}> */
         <div className="filter__panel">
+            {/* <i className="filter__search-icon fas fa-search"></i> */}
             <input className="filter__search-input" type="text" value={search} onClick={handleSearchClick} onChange={handleSearch} />
+            {tipChoosed ?
+                <i onClick={handleSearchClick} className="filter__arrowIcon filter__arrowIcon--arrowUp fas fa-caret-up"></i> :
+                <i onClick={handleSearchClick} className="filter__arrowIcon filter__aarrowIcon--arrowDown fas fa-caret-down"></i>
+            }
             <ul className={`filter__dropdown ${tipChoosed ? "filter__dropdown--visible" : "filter__dropdown--hidden"}`}>
                 {tipChoosed && tips}
             </ul>
