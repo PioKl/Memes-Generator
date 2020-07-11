@@ -1,5 +1,5 @@
 .meme-card {
-    border: .2rem solid black;
+    //border: .2rem solid white;
     position: relative;
     /* transition: .5s ease-in-out; */
     //height: 100%;
@@ -8,10 +8,19 @@
         width: 100%;
         //height: 100%;
         //height: 25rem;
-        height: 27rem;
+        //height: 27rem;
+        height: 20rem;
         //object-fit: cover;
         display: block; // usuniecie "bialej spacji pod zdjeciem"
-        //fill contain, cover, none, scale-down      
+        //fill contain, cover, none, scale-down
+
+        &--lengthAdapted {
+            height: 30rem;
+
+            @media only screen and (max-width: 530px) {
+                height: 20rem;
+            }
+        }
     }
 
     &:hover &__overlay {
