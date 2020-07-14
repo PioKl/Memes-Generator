@@ -14,6 +14,21 @@
         display: block; // usuniecie "bialej spacji pod zdjeciem"
         //fill contain, cover, none, scale-down
 
+        &--AmericanChopperArgument,
+        &--BoardroomMeetingSuggestion,
+        &--ExpandingBrain,
+        &--FindingNeverland,
+        &--InhalingSeagull,
+        &--MarvelCivilWar1,
+        &--PanikKalmPanik,
+        &--PeterParkerCry {
+            object-fit: cover;
+
+            @media only screen and (max-width: 530px) {
+                height: 40rem;
+            }
+        }
+
         &--lengthAdapted {
             height: 30rem;
 
