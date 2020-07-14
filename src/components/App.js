@@ -41,15 +41,17 @@ function App() {
 
   return (
     <Router basename={process.env.PUBLIC_URL}>
-      <div className="App container" onClick={handleTipStatusChange} >
+      <div className="App" onClick={handleTipStatusChange} >
         <Switch>
           <Route exact path="/">
-            <header className="header">
-              <Search memes={memes} filteredMemes={filteredMemes} setFilteredMemes={setFilteredMemes} tipChoosed={tipChoosed} setTipChoosed={setTipChoosed} />
-            </header>
-            <main className="main">
-              <MemesList tableOfMemes={filteredMemes} />
-            </main>
+            <div className="container">
+              <header className="header">
+                <Search memes={memes} filteredMemes={filteredMemes} setFilteredMemes={setFilteredMemes} tipChoosed={tipChoosed} setTipChoosed={setTipChoosed} />
+              </header>
+              <main className="main">
+                <MemesList tableOfMemes={filteredMemes} />
+              </main>
+            </div>
           </Route>
           {chosedMeme}
         </Switch>
