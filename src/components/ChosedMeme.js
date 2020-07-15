@@ -109,16 +109,16 @@ const ChosedMeme = ({ pickedMeme }) => {
                                             </>
                                             :
                                             <>
-                                                <input className="chosedMeme__input" type="text" placeholder="text 1" value={boxText0} onChange={e => { setBoxText0(e.target.value) }} />
-                                                <input className="chosedMeme__input" type="text" placeholder="text 2" value={boxText1} onChange={e => { setBoxText1(e.target.value) }} />
-                                                <input className="chosedMeme__input" type="text" placeholder="text 3" value={boxText2} onChange={e => { setBoxText2(e.target.value) }} />
-                                                <input className="chosedMeme__input" type="text" placeholder="text 4" value={boxText3} onChange={e => { setBoxText3(e.target.value) }} />
-                                                <input className="chosedMeme__input" type="text" placeholder="text 5" value={boxText4} onChange={e => { setBoxText4(e.target.value) }} />
+                                                <input className={`chosedMeme__input chosedMeme__input--box5`} type="text" placeholder="text 1" value={boxText0} onChange={e => { setBoxText0(e.target.value) }} />
+                                                <input className={`chosedMeme__input chosedMeme__input--box5`} type="text" placeholder="text 2" value={boxText1} onChange={e => { setBoxText1(e.target.value) }} />
+                                                <input className={`chosedMeme__input chosedMeme__input--box5`} type="text" placeholder="text 3" value={boxText2} onChange={e => { setBoxText2(e.target.value) }} />
+                                                <input className={`chosedMeme__input chosedMeme__input--box5`} type="text" placeholder="text 4" value={boxText3} onChange={e => { setBoxText3(e.target.value) }} />
+                                                <input className={`chosedMeme__input chosedMeme__input--box5`} type="text" placeholder="text 5" value={boxText4} onChange={e => { setBoxText4(e.target.value) }} />
                                             </>
 
                                 }
 
-                                <button className="chosedMeme__submitButton" type="submit">Create</button>
+                                <button className={`chosedMeme__submitButton ${pickedMeme.name === "American Chopper Argument" && `chosedMeme__submitButton--${whiteSpacesReplace(pickedMeme.name)}`}`} type="submit">Create</button>
                             </div>
                         </div>
                     </form>
