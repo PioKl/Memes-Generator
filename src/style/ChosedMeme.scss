@@ -5,44 +5,19 @@ $pictureAndCreationContainerMaxWidth: 40rem;
 .chosedMeme {
     &__container {
         padding: 3rem 2rem;
-
-        /*         @media only screen and (min-width: $bp-small) {
-            padding: 4rem 10rem;
-        } */
+        /*         height: 100vh;
+        background-color: red;
+        clip-path: polygon(25% 0%, 100% 0, 100% 95%, 75% 100%, 0 100%, 0 5%); */
     }
-
-    /*     &__container {
-        width: 100%;
-        padding: 4rem 10rem;
-        //height: 80vh;
-    } */
 
     &__form-container {
         width: 100%;
-        //width: 120rem;
-        //height: 89vh;
         height: 80vh;
-        //max-height: 62rem;
-
-
-        //height: 62rem;
-
-        //padding: 4rem 10rem;
         display: flex;
         flex-direction: row;
-        //justify-content: space-between;
-        justify-content: space-around;
 
-        /*         position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%); */
-
-        //height: 85vh;
         @media only screen and (max-width: $bp-small) {
             flex-direction: column;
-            //padding: 4rem 5rem;
-            //padding: 1rem 2rem;
         }
 
         @media only screen and (min-width: $bp-small) {
@@ -51,12 +26,12 @@ $pictureAndCreationContainerMaxWidth: 40rem;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
+            justify-content: space-around
         }
     }
 
     &__picture-container {
-        //width: 50%;
-        width: 50rem;
+        width: 60rem;
         text-align: center;
 
         @media only screen and (max-width: $bp-small) {
@@ -84,10 +59,8 @@ $pictureAndCreationContainerMaxWidth: 40rem;
         &--PeterParkerCry {
             width: 100%;
             max-width: 40rem;
-            //height: 50rem;
 
             @media only screen and (max-width: $bp-small) {
-                //width: 25rem;
                 width: 100%;
                 max-width: 30rem;
                 height: 40rem;
@@ -95,47 +68,15 @@ $pictureAndCreationContainerMaxWidth: 40rem;
         }
     }
 
-    //&__title {
-    //color: white;
-    //text-align: center;
-
-    /*         position: absolute;
-        top: 1%;
-        left: 50%;
-        transform: translateX(-50%); */
-    //transform: translateY(-100%);
-    // }
-
     &__creation-container {
-        /*  width: 50%;
-        display: flex;
-        flex-flow: column;
-        position: relative;
-        padding-left: 5rem;
-        justify-content: flex-end; */
-
-        /*         width: 50%;
-        display: flex;
-        flex-direction: column;
-        position: relative;
-        padding-left: 5rem;
-        justify-content: space-between;
-        justify-content: space-around;
-        align-self: flex-end;
-        justify-content: space-between; */
         display: grid;
         width: 50%;
         padding-left: 5rem;
 
-        /*         input {
-            width: 50%;
-            margin: 1rem auto;
-        } */
         @media only screen and (max-width: $bp-small) {
             width: 100%;
             max-width: $pictureAndCreationContainerMaxWidth;
             margin: auto;
-            //justify-content: center;
             padding: 2rem 0;
         }
     }
@@ -144,10 +85,14 @@ $pictureAndCreationContainerMaxWidth: 40rem;
         text-align: center;
         align-self: end;
         color: white;
+        font-family: 'Coming Soon', cursive;
+        //font-family: 'Fondamento', cursive;
+        //font-family: 'B612', sans-serif;
+        font-weight: 700;
     }
 
     &__title {
-        font-size: 2.3rem;
+        font-size: 3rem;
         margin-bottom: 2rem;
 
         @media only screen and (max-width: $bp-small) {
@@ -167,52 +112,44 @@ $pictureAndCreationContainerMaxWidth: 40rem;
         border: .2rem solid black;
         border-radius: 1rem;
         padding: 1rem;
+
+        &--box5 {
+            @media only screen and (min-width: $bp-small) and (max-width: 1200px) {
+                padding: .5rem;
+            }
+        }
     }
 
     &__input {
-        /*         border: .2rem solid black;
-        border-radius: 1rem;
-        padding: 1rem; */
-
-        //width: 25rem;
         margin-bottom: 4rem;
-        //margin: 2rem 0rem;
+        font-family: 'B612', sans-serif;
     }
 
     &__submitButton {
-        /*         border: .2rem solid black;
-        border-radius: 1rem;
-        padding: 1rem; */
-
         cursor: pointer;
         background-color: rgba(0, 110, 255, 0.849);
         color: white;
         font-weight: 700;
         letter-spacing: .6rem;
         text-transform: uppercase;
+        font-family: 'Coming Soon', cursive;
 
         &:hover {
             background-color: darken(rgba(0, 110, 255, 0.849), 10%);
         }
 
-        //width: 25rem;
-        //width: 100%;
-        /*         position: absolute;
-        top: 100%;
-        transform: translateY(-100%); */
-        //left: 50%;
-        //transform: translate(-50%, -100%);
+        &:focus {
+            outline: none;
+            //border: 0;
+            background-color: darken(rgba(0, 110, 255, 0.849), 15%);
+            //box-shadow: inset 0rem 0rem .5rem .5rem rgba(black, .9);
+        }
     }
 
 }
 
-/* .spr {
-    display: flex;
-    flex-flow: column;
-    align-self: flex-end;
-} */
-
 .createdMeme {
     display: flex;
     justify-content: center;
+    padding: 2rem 0rem;
 }
