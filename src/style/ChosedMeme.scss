@@ -5,9 +5,6 @@ $pictureAndCreationContainerMaxWidth: 40rem;
 .chosedMeme {
     &__container {
         padding: 3rem 2rem;
-        /*         height: 100vh;
-        background-color: red;
-        clip-path: polygon(25% 0%, 100% 0, 100% 95%, 75% 100%, 0 100%, 0 5%); */
     }
 
     &__form-container {
@@ -86,8 +83,6 @@ $pictureAndCreationContainerMaxWidth: 40rem;
         align-self: end;
         color: white;
         font-family: 'Coming Soon', cursive;
-        //font-family: 'Fondamento', cursive;
-        //font-family: 'B612', sans-serif;
         font-weight: 700;
     }
 
@@ -109,8 +104,6 @@ $pictureAndCreationContainerMaxWidth: 40rem;
 
     &__input,
     &__submitButton {
-        border: .2rem solid black;
-        border-radius: 1rem;
         padding: 1rem;
 
         &--box5 {
@@ -121,35 +114,75 @@ $pictureAndCreationContainerMaxWidth: 40rem;
     }
 
     &__input {
+        border: .2rem solid black;
+        border-radius: 1rem;
         margin-bottom: 4rem;
         font-family: 'B612', sans-serif;
     }
 
     &__submitButton {
         cursor: pointer;
-        background-color: rgba(0, 110, 255, 0.849);
+        background-color: $dark;
         color: white;
         font-weight: 700;
         letter-spacing: .6rem;
         text-transform: uppercase;
         font-family: 'Coming Soon', cursive;
+        border: .3rem solid black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        z-index: 0;
+        transition: 1s;
+        transform: translateZ(0); //usunięciu problemu takiego przycięcia "laga", gdy konczy sie transition
+
+        &::before,
+        &::after {
+            position: absolute;
+            background-color: $dark;
+            z-index: -1;
+            transition: 1s;
+            content: '';
+        }
+
+        &::before {
+            height: 45.2px;
+            width: 90%;
+        }
+
+        &::after {
+            width: 100%;
+            height: 3rem;
+        }
+
+        &:hover::before {
+            width: 0px;
+            background-color: darken($blue, 10%);
+        }
+
+        &:hover::after {
+            height: 0px;
+            background-color: darken($blue, 10%);
+        }
 
         &:hover {
-            background-color: darken(rgba(0, 110, 255, 0.849), 10%);
+            border-radius: 1rem;
+            background-color: darken($blue, 10%);
         }
 
-        &:focus {
-            outline: none;
-            //border: 0;
-            background-color: darken(rgba(0, 110, 255, 0.849), 15%);
-            //box-shadow: inset 0rem 0rem .5rem .5rem rgba(black, .9);
-        }
     }
 
 }
 
 .createdMeme {
-    display: flex;
-    justify-content: center;
-    padding: 2rem 0rem;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+
+    &__img {
+        width: 100%;
+        height: 100%;
+        padding: 2rem;
+    }
 }

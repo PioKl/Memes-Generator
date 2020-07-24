@@ -2,15 +2,11 @@
 
 .header {
     padding-bottom: 4rem;
-    /*     max-width: 32rem;
-    margin: auto; */
 }
 
 .filter {
     &__panel {
-        //width: 100%;
         position: relative;
-        //padding-bottom: 3rem;
         display: flex;
         flex-flow: row;
         background-color: white;
@@ -25,51 +21,16 @@
             align-self: center;
             font-family: 'Font Awesome 5 Free';
 
-            /* cursor: pointer; */
-            //background-color: red;
             @media only screen and (max-width: $bp-small) {
                 font-size: 2rem;
                 padding: .5rem 1rem;
             }
         }
-
-        /* &--arrowDown {
-            &::after {
-                content: '\f0d7';
-                font-weight: 900;
-                font-size: 2.6rem;
-                align-self: center;
-                font-family: 'Font Awesome 5 Free';
-                padding: .5rem 2rem;
-                background-color: red;
-                cursor: pointer;
-            }
-        }
-
-        &--arrowUp {
-            &::after {
-                content: '\f0d8';
-                font-weight: 900;
-                font-size: 2.6rem;
-                align-self: center;
-                font-family: 'Font Awesome 5 Free';
-                padding: .5rem 2rem;
-                background-color: red;
-                cursor: pointer;
-            }
-        } */
     }
-
-    /*     &__search-icon {
-        padding: 0 1rem;
-        align-self: center;
-        font-size: 2.6rem;
-    } */
 
     &__search-input {
         width: 100%;
         padding: 1rem;
-        //background-color: white;
         font-size: 1.6rem;
         font-family: inherit;
         border: 0;
@@ -77,10 +38,6 @@
         @media only screen and (max-width: $bp-small) {
             font-size: 1rem;
         }
-
-        /*         width: 100%;
-        font-size: 1.6rem;
-        padding: 1rem; */
 
         &:focus {
             outline: none;
@@ -112,7 +69,6 @@
         overflow: hidden;
         margin-bottom: 2rem;
         font-weight: 700;
-        //font-family: 'B612', sans-serif;
         cursor: pointer;
 
         @media only screen and (max-width: $bp-small) {
@@ -121,7 +77,6 @@
 
         &--visible {
             margin-top: 5rem;
-            //border: .2rem solid black;
         }
 
         &--hidden {
@@ -130,19 +85,14 @@
 
         &-item {
             display: block; //w celu usuniecia problemu bialej spacji po prawej stronie
-            //padding: 1rem 0 1rem 0;
             padding: 1rem;
-
-            //background-color: rgb(47, 52, 66);
             color: white;
 
             &:nth-child(odd) {
-                //background-color: rgba(128, 128, 128, 0.534);
                 background-color: lighten(rgb(47, 52, 66), 5%);
             }
 
             &:hover {
-                //background-color: blue;
                 background-color: darken(rgba(128, 128, 128, 0.534), 50%);
             }
         }
