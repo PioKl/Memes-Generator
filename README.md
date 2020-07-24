@@ -1,3 +1,5 @@
+https://github.com/PioKl/Memes-Generator
+
 Aplikacja, której zadaniem jest wyświetlenie memów, które pobierane są poprzez API, wyszukania go (wyszukiwanie ze względu na wpisane słowo, ale także jest "dropdownlista", która zawiera interesujące użytkownika memy), a następnie możliwości utworzenia własnego mema (liczba tekstów w obrazku jest różna i zależy od tego na ile dany mem pozwala).
 
 Głównie wykorzystywane jest REST API i Routing.
