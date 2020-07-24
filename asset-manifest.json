@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/Memes-Generator/static/css/main.68f6a22e.chunk.css",
-    "main.js": "/Memes-Generator/static/js/main.9fb1be60.chunk.js",
-    "main.js.map": "/Memes-Generator/static/js/main.9fb1be60.chunk.js.map",
+    "main.js": "/Memes-Generator/static/js/main.b86e38f5.chunk.js",
+    "main.js.map": "/Memes-Generator/static/js/main.b86e38f5.chunk.js.map",
     "runtime-main.js": "/Memes-Generator/static/js/runtime-main.79eb904a.js",
     "runtime-main.js.map": "/Memes-Generator/static/js/runtime-main.79eb904a.js.map",
     "static/js/2.f41f0516.chunk.js": "/Memes-Generator/static/js/2.f41f0516.chunk.js",
     "static/js/2.f41f0516.chunk.js.map": "/Memes-Generator/static/js/2.f41f0516.chunk.js.map",
     "index.html": "/Memes-Generator/index.html",
-    "precache-manifest.a1a7dad4dc6e04c261215fff53d06000.js": "/Memes-Generator/precache-manifest.a1a7dad4dc6e04c261215fff53d06000.js",
+    "precache-manifest.727b4303eccc10decbb13f715aa84ad7.js": "/Memes-Generator/precache-manifest.727b4303eccc10decbb13f715aa84ad7.js",
     "service-worker.js": "/Memes-Generator/service-worker.js",
     "static/css/main.68f6a22e.chunk.css.map": "/Memes-Generator/static/css/main.68f6a22e.chunk.css.map",
     "static/js/2.f41f0516.chunk.js.LICENSE.txt": "/Memes-Generator/static/js/2.f41f0516.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.79eb904a.js",
     "static/js/2.f41f0516.chunk.js",
     "static/css/main.68f6a22e.chunk.css",
-    "static/js/main.9fb1be60.chunk.js"
+    "static/js/main.b86e38f5.chunk.js"
   ]
 }
