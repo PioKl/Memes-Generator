@@ -72,7 +72,7 @@ const ChosedMeme = ({ pickedMeme }) => {
             {createdMeme ?
                 <div className="createdMeme">
                     <a href={createdMeme} rel="noopener noreferrer" target="_blank">
-                        <img src={createdMeme} alt="" />
+                        <img className="createdMeme__img" src={createdMeme} alt="Created Meme" />
                     </a>
                 </div>
 
