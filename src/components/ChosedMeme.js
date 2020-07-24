@@ -80,14 +80,12 @@ const ChosedMeme = ({ pickedMeme }) => {
                 <div className="chosedMeme__container">
                     <form className="chosedMeme__form-container" onSubmit={handleSubmit}>
                         <div className="chosedMeme__picture-container">
-                            <img className={`chosedMeme__img chosedMeme__img--${whiteSpacesReplace(pickedMeme.name)}`} src={pickedMeme.url} /* width="500" height="500" */ alt="" />
-                            {/* <h1 className="chosedMeme__title">{pickedMeme.name}</h1> */}
+                            <img className={`chosedMeme__img chosedMeme__img--${whiteSpacesReplace(pickedMeme.name)}`} src={pickedMeme.url} alt="" />
                         </div>
                         <div className="chosedMeme__creation-container">
                             <div className="chosedMeme__title-container">
                                 <h1 className="chosedMeme__title">{pickedMeme.name}</h1>
                             </div>
-                            {/* <h1 className="chosedMeme__title">{pickedMeme.name}</h1> */}
                             <div className="chosedMeme__textCreation-container">
                                 {pickedMeme.box_count <= 2 ?
                                     <>

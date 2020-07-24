@@ -26,7 +26,6 @@ const Search = ({ memes, filteredMemes, setFilteredMemes, tipChoosed, setTipChoo
 
     const handleSelect = (e) => {
         setTipChoosed(false);
-        //setSearch(e.target.value)
         setSearch(e.currentTarget.getAttribute('value'))
         let actualMemesList = [];
         let newMemesList = [];
@@ -49,9 +48,7 @@ const Search = ({ memes, filteredMemes, setFilteredMemes, tipChoosed, setTipChoo
 
 
     return (
-        /*         <div onClick={handleSearchClick} className={`filter__panel ${tipChoosed ? "filter__panel--arrowUp" : "filter__panel--arrowDown"}`}> */
         <div className="filter__panel">
-            {/* <i className="filter__search-icon fas fa-search"></i> */}
             <input className="filter__search-input" type="text" value={search} onClick={handleSearchClick} onChange={handleSearch} />
             {tipChoosed ?
                 <i onClick={handleSearchClick} className="filter__arrowIcon filter__arrowIcon--arrowUp fas fa-caret-up"></i> :
