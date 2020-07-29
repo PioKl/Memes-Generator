@@ -1,4 +1,4 @@
-https://github.com/PioKl/Memes-Generator
+https://piokl.github.io/Memes-Generator/
 
 Aplikacja, której zadaniem jest wyświetlenie memów, które pobierane są poprzez API, wyszukania go (wyszukiwanie ze względu na wpisane słowo, ale także dostępna jest "drop-down lista", która zawiera interesujące użytkownika memy), a następnie możliwości utworzenia własnego mema (liczba tekstów w obrazku jest różna i zależy od tego na ile dany mem pozwala).
 
