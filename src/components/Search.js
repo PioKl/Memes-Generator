@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import React, { useContext } from 'react';
 import '../style/Search.scss'
+import { SearchContext } from '../contexts/SearchContext';
 
 const Search = ({ memes, filteredMemes, setFilteredMemes, tipChoosed, setTipChoosed }) => {
 
-    const [search, setSearch] = useState('');
+    const { search, setSearch } = useContext(SearchContext);
 
     const handleSearch = (e) => {
         setSearch(e.target.value)
