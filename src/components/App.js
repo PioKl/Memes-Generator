@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import axios from 'axios';
 import { whiteSpacesReplace } from '../functions/replace';
 import Search from './Search';
+import SearchContextProvider from '../contexts/SearchContext';
 
 function App() {
 
@@ -40,23 +41,25 @@ function App() {
   ));
 
   return (
-    <Router basename={process.env.PUBLIC_URL}>
-      <div className="App" onClick={handleTipStatusChange} >
-        <Switch>
-          <Route exact path="/">
-            <div className="container">
-              <header className="header">
-                <Search memes={memes} filteredMemes={filteredMemes} setFilteredMemes={setFilteredMemes} tipChoosed={tipChoosed} setTipChoosed={setTipChoosed} />
-              </header>
-              <main className="main">
-                <MemesList tableOfMemes={filteredMemes} />
-              </main>
-            </div>
-          </Route>
-          {chosedMeme}
-        </Switch>
-      </div>
-    </Router >
+    <SearchContextProvider>
+      <Router basename={process.env.PUBLIC_URL}>
+        <div className="App" onClick={handleTipStatusChange} >
+          <Switch>
+            <Route exact path="/">
+              <div className="container">
+                <header className="header">
+                  <Search memes={memes} filteredMemes={filteredMemes} setFilteredMemes={setFilteredMemes} tipChoosed={tipChoosed} setTipChoosed={setTipChoosed} />
+                </header>
+                <main className="main">
+                  <MemesList tableOfMemes={filteredMemes} />
+                </main>
+              </div>
+            </Route>
+            {chosedMeme}
+          </Switch>
+        </div>
+      </Router >
+    </SearchContextProvider>
   );
 }
 
